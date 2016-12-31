@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="Jin Park">
+
+    <style type="text/css">
+        body {
+            height: 100vh;
+            background-image: url('route66.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        img {
+            position: absolute;
+        }
+    </style>
+
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.min.js"></script>
+    <script type="text/javascript">
+    var sound = new Howl({
+      src: ['itshighnoon.ogg']
+    });
+
+    document.body.addEventListener("click", function(event){
+        var x = event.clientX;
+        var y = event.clientY;
+        var mccree = document.createElement('IMG');
+        document.body.appendChild(mccree);
+        mccree.style.position = 'absolute';
+        mccree.style.top = y + 'px';
+        mccree.style.left = x - 180 + 'px';
+        mccree.src = '/mccree.png'        
+
+        sound.play();
+    })
+
+    </script>
+</body>
+</html>
