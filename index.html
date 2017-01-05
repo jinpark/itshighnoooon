@@ -33,6 +33,9 @@
     var sound = new Howl({
       src: ['itshighnoon.ogg']
     });
+    var noot = new Howl({
+      src: ['noot.mp4']
+    });
 
     document.body.addEventListener("click", function(event){
         var x = event.clientX;
@@ -41,10 +44,14 @@
         document.body.appendChild(mccree);
         mccree.style.position = 'absolute';
         mccree.style.top = y + 'px';
-        mccree.style.left = x - 180 + 'px';
-        mccree.src = 'mccree.png'        
-
-        sound.play();
+        mccree.style.left = x - 100 + 'px';        
+        if (Math.random() < 0.95){
+            mccree.src = 'mccree-small.png'
+            sound.play();
+        } else {
+             mccree.src = 'noot.png'
+             noot.play();
+        }
     })
 
     </script>
