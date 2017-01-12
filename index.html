@@ -14,9 +14,18 @@
             background-image: url('route66.png');
             background-size: cover;
             background-repeat: no-repeat;
+            cursor: pointer;
+
         }
         img {
             position: absolute;
+            -webkit-touch-callout: none; /* iOS Safari */
+              -webkit-user-select: none; /* Chrome/Safari/Opera */
+               -khtml-user-select: none; /* Konqueror */
+                 -moz-user-select: none; /* Firefox */
+                  -ms-user-select: none; /* Internet Explorer/Edge */
+                      user-select: none; /* Non-prefixed version, currently
+                                            not supported by any browser */
         }
     </style>
 
@@ -44,7 +53,8 @@
         document.body.appendChild(mccree);
         mccree.style.position = 'absolute';
         mccree.style.top = y + 'px';
-        mccree.style.left = x - 100 + 'px';        
+        mccree.style.left = x - 100 + 'px';   
+        mccree.draggable = false;     
         if (Math.random() < 0.9){
             mccree.src = 'mccree-small.png'
             sound.play();
