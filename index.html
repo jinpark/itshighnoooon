@@ -27,6 +27,9 @@
                       user-select: none; /* Non-prefixed version, currently
                                             not supported by any browser */
         }
+        .hidden {
+          display: none;
+        }
     </style>
 
 
@@ -36,7 +39,8 @@
 </head>
 
 <body>
-
+  <img src="mccree-small.png" class='hidden'>
+  <img src="noot.png" class='hidden'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.min.js"></script>
     <script type="text/javascript">
     var sound = new Howl({
